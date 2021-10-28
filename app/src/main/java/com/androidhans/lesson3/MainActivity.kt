@@ -17,9 +17,9 @@ class MainActivity : AppCompatActivity() {
                 if (requestCode == 1 && resultCode == Activity.RESULT_OK) {
                     //讀取 Bundle捆內資料
                     findViewById<TextView>(R.id.tv_meal).text =
-                        "飲料: ${it.getString("drink")}\n\n" +
-                                "甜度: ${it.getString("sugar")}\n\n" +
-                                "冰塊: ${it.getString("ice")}"
+                        "飲料: ${it.getString("飲料")}\n\n" +
+                                "甜度: ${it.getString("甜度")}\n\n" +
+                                "冰塊: ${it.getString("冰塊")}"
 
                 }
             }

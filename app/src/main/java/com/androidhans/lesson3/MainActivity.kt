@@ -7,17 +7,7 @@ import android.os.Bundle
 import android.widget.*
 
 class MainActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
 
-        //查找按ID<類型>(id名稱).並監聽按鍵是否按下
-        findViewById<Button>(R.id.btn_choice).setOnClickListener {
-            //透過 Intent 切換至 SecActivity 並傳遞 requestCode 作為識別編號
-            val intent = Intent(this, SecActivity::class.java)
-            startActivityForResult(intent, 1)
-        }
-    }
         //覆蓋活動結果（請求代碼：Int，結果代碼：Int，數據：意圖？）
         override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
             super.onActivityResult(requestCode, resultCode, data)
@@ -34,4 +24,15 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        //查找按ID<類型>(id名稱).並監聽按鍵是否按下
+        findViewById<Button>(R.id.btn_choice).setOnClickListener {
+            //透過 Intent 切換至 SecActivity 並傳遞 requestCode 作為識別編號
+            val intent = Intent(this, SecActivity::class.java)
+            startActivityForResult(intent, 1)
+        }
+    }
     }

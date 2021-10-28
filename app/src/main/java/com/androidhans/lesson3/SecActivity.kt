@@ -1,11 +1,10 @@
 package com.androidhans.lesson3
 
-import android.app.Activity
+import  android.app.Activity
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
-
+import androidx.appcompat.app.AppCompatActivity
 
 
 class SecActivity : AppCompatActivity() {
@@ -19,9 +18,10 @@ class SecActivity : AppCompatActivity() {
     val radioGroup = findViewById<RadioGroup>(R.id.radioGroup)
     val radioGroup2 = findViewById<RadioGroup>(R.id.radioGroup2)
 
-    //send鍵設置點擊監聽器
-    btn_send.setOnClickListener = if (ed_drink.length() < 1) //如果內容長度<就顯示"請輸入飲料名稱"
-        Toast.makeText(this, "請輸入飲料名稱", Toast.LENGTH_SHORT).show()
+    //send鍵設置點擊監聽器//如果內容長度<1就顯示"請輸入飲料名稱"
+    btn_send.setOnClickListener {
+        if (ed_drink.length() < 1)
+            Toast.makeText(this, "請輸入飲料名稱", Toast.LENGTH_SHORT).show()
     else{
         //宣告Bundle捆
         val b = Bundle()

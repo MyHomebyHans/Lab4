@@ -28,8 +28,7 @@ class SecActivity : AppCompatActivity() {
             b.putString("drink", ed_drink.text.toString()) //放入字串("字串",id.內容文字.到字串)
             b.putString(
                 "sugar", radioGroup.findViewById<RadioButton>//放入字串("字串",id.按id查看<類型>
-                    (radioGroup.checkedRadioButtonId).text.toString()
-            )   //(id.確認選中的按鍵id.)內容文字.到字串)
+                    (radioGroup.checkedRadioButtonId).text.toString())   //(id.確認選中的按鍵id.)內容文字.到字串)
             b.putString(
                 "ice", radioGroup2.findViewById<RadioButton>
                     (radioGroup2.checkedRadioButtonId).text.toString()

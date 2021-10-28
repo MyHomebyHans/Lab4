@@ -24,14 +24,14 @@ class MainActivity : AppCompatActivity() {
             //判斷data不為空 並檢查是否夾帶資料
             data?.extras?.let {
                 //驗證發出對象，確認 SecActivity 執行的狀態 活動.結果_確認
-                if (requestCode == 1 && resultCode == Activity.RESULT_OK)
-                //讀取 Bundle捆內資料
-                  findViewById<TextView>(R.id.tv_meal).text =
-                      "飲料: ${it.getString("drink")}\n\n" +
-                              "甜度: ${it.getString("sugar")}\n\n" +
-                              "冰塊: ${it.getString("ice")}"
+                if (requestCode == 1 && resultCode == Activity.RESULT_OK) {
+                    //讀取 Bundle捆內資料
+                    findViewById<TextView>(R.id.tv_meal).text =
+                        "飲料: ${it.getString("drink")}\n\n" +
+                                "甜度: ${it.getString("sugar")}\n\n" +
+                                "冰塊: ${it.getString("ice")}"
 
-
+                }
             }
         }
     }
